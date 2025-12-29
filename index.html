@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BM Monthly Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS File -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h2>📊 BM Monthly Tracker</h2>
+
+  <div class="controls">
+    <select id="month"></select>
+    <select id="year"></select>
+    <input type="number" id="targetInput" value="50">
+    <button class="reset" id="resetAll">🗑 Reset</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Date</th><th>Day</th><th>Completed</th></tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+  <div class="progress-box">
+    <div class="progress-line">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-text" id="progressText"></div>
+  </div>
+
+  <canvas id="graph"></canvas>
+</div>
+
+<!-- Congratulations Modal -->
+<div class="modal" id="completeModal">
+  <div class="modal-box">
+    <h2>🎉 Congratulations!</h2>
+    <p>You completed <b><span id="finalScore"></span></b> tasks</p>
+    <button onclick="closeModal()">OK</button>
+  </div>
+</div>
+
+<audio id="sound">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3">
+</audio>
+
+<!-- JS File -->
+<script src="script.js"></script>
+</body>
+</html>
